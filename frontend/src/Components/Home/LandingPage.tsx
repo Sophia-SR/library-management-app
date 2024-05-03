@@ -1,4 +1,6 @@
 import * as React from "react";
+import  { Link } from "react-router-dom";
+
 
 interface ImageProps {
   src: string;
@@ -20,10 +22,8 @@ const images = [
 ];
 
 
-const LandingPage: React.FC = () => { const handleSignUp = () => { // TODO: Implement sign up functionality console.log("Sign up button clicked");
-};
- const handleLogin = () => { // TODO: Implement login functionality console.log("Login button clicked");
- };
+
+const LandingPage: React.FC = () => {
   return (
     <main className="flex flex-col justify-center px-16 bg-white max-md:px-5">
       <div className="max-md:mr-1 max-md:max-w-full">
@@ -39,12 +39,9 @@ const LandingPage: React.FC = () => { const handleSignUp = () => { // TODO: Impl
                 </p>
               </div>
               <div className="flex gap-4 items-start self-start pt-4 mt-6 text-base leading-6">
-                <button className="justify-center px-6 py-3 text-white bg-black border border-black border-solid max-md:px-5">
-                  Sign Up
-                </button>
-                <button className="justify-center px-6 py-3 text-black whitespace-nowrap border border-black border-solid max-md:px-5">
-                  Login
-                </button>
+                <Link to="/login" className=" justify-center px-6 py-3 text-white bg-black border border-black border-solid max-md:px-5">
+                  Explore
+                </Link>
               </div>
             </div>
           </section>
