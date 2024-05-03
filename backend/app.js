@@ -1,20 +1,21 @@
+// app.js
+
 const express = require('express');
 const bodyParser = require('body-parser');
-const sequelize = require('./database/connection');
 const authRoutes = require('./routes/authRoutes');
+const sequelize = require('./database/connection');
 
 const app = express();
-const PORT = process.env.PORT || 3000;
+const port = 3000;
 
-// Middleware
 app.use(bodyParser.json());
 
 // Routes
 app.use('/api/auth', authRoutes);
 
-// Sync Sequelize models with database and start server
+// Start the server
 sequelize.sync().then(() => {
-  app.listen(PORT, () => {
-    console.log(`Server is running on port ${PORT}`);
+  app.listen(port, () => {
+    console.log(`Server is running on port ${port}`);
   });
 });
