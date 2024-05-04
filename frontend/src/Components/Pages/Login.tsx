@@ -2,7 +2,6 @@ import React from 'react';
 import { useAuth0 } from '@auth0/auth0-react';
 
 
-
     interface SignInFormProps {
       onSubmit: (email: string, password: string) => void;
       onSignUp: () => void;
