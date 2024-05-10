@@ -1,4 +1,6 @@
 import * as React from "react";
+import '../../index.css';
+import Button from '../Layout/Button.tsx';
 import  { Link } from "react-router-dom";
 
 
@@ -39,9 +41,12 @@ const LandingPage: React.FC = () => {
                 </p>
               </div>
               <div className="flex gap-4 items-start self-start pt-4 mt-6 text-base leading-6">
-                <Link to="/login" className=" justify-center px-6 py-3 text-white bg-black border border-black border-solid max-md:px-5">
-                  Explore
-                </Link>
+                <Link to="/signup" className=" justify-center px-6 py-3 text-white bg-black border border-black border-solid max-md:px-5">
+                  Get Started
+               </Link>
+               <Link to="/login" className=" justify-center px-6 py-3 text-black bg-white border border-black border-solid max-md:px-5">
+                  Login
+               </Link>
               </div>
             </div>
           </section>

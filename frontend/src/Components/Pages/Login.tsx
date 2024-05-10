@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { useAuth0 } from '@auth0/auth0-react';
 
 
@@ -95,9 +96,11 @@ import { useAuth0 } from '@auth0/auth0-react';
           </div>
           <div className="flex gap-1.5 self-center mt-6 text-center text-black">
             <span>Don't have an account?</span>
+            <Link to="/signup" className="underline">
             <button type="button" onClick={onSignUp} className="underline">
               Sign Up
             </button>
+            </Link>
           </div>
         </form>
       );
